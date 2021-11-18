@@ -3,6 +3,15 @@
     <display-name>Archetype Created Web Application</display-name>
 
     <servlet>
+        <servlet-name>Servlet0</servlet-name>
+        <servlet-class>com.revature.Servlet0</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Servlet0</servlet-name>
+        <url-pattern>/Servlet0</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
         <servlet-name>Servlet1</servlet-name>
         <servlet-class>com.revature.Servlet1</servlet-class>
     </servlet>

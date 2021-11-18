@@ -28,7 +28,7 @@ public class App {
 //        employee.setName("Mark");
 //        employee.setEmail("m@gmail.com");
         // TODO: run page 1, which runs servlet 1
-        Servlet1 servlet1 = new Servlet1();
+        Servlet0 servlet1 = new Servlet0();
         Employee employee = servlet1.getEmployee(); // TODO: Get from Servlet1
         // save the employee
         session.save(employee);

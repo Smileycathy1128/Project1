@@ -6,15 +6,15 @@ import javax.persistence.Id;
 @Entity
 public class Employee {
     @Id
-    private int id;
+    private String id;
     private String name;
     private String email;
-    private int gender;
+    private String gender;
     private String country;
 
     public Employee(){}
 
-    public Employee(int id, String name, String email, String gender, String country) {
+    public Employee(String id, String name, String email, String gender, String country) {
         this.id = id;
         this.name = name;
         this.email = email;
@@ -22,10 +22,10 @@ public class Employee {
         this.country = country;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -44,32 +44,34 @@ public class Employee {
     }
 
     public String getGender() {
-        switch (gender) {
-            case 0:
-                return "male";
-            case 1:
-                return "female";
-            case 2:
-                return "non-binary";
-            default: // usually -1
-                return "unknown or other";
-        }
+        return gender;
+//        switch (gender) {
+//            case 0:
+//                return "male";
+//            case 1:
+//                return "female";
+//            case 2:
+//                return "non-binary";
+//            default: // usually -1
+//                return "unknown or other";
+//        }
     }
     public void setGender(String gender) {
-        switch (gender) {
-            case "male":
-                this.gender = 0;
-                break;
-            case "female":
-                this.gender = 1;
-                break;
-            case "non-binary":
-                this.gender = 2;
-                break;
-            default:
-                this.gender = -1;
-                break;
-        }
+        this.gender = gender;
+//        switch (gender) {
+//            case "male":
+//                this.gender = 0;
+//                break;
+//            case "female":
+//                this.gender = 1;
+//                break;
+//            case "non-binary":
+//                this.gender = 2;
+//                break;
+//            default:
+//                this.gender = -1;
+//                break;
+//        }
     }
 
     public String getCountry() {
