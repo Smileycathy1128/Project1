@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="ISO-8859-1">
+        <title>Insert title here</title>
+    </head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=PT+Mono&family=PT+Sans&display=swap');
+        body{
+            font-family: 'PT Sans', sans-serif;
+            font-family: 'PT Mono', monospace;
+        }
+    </style>
+    <body>
+        <form action="Servlet1" method="get">
+            <input type="number" id="id" name="id-field" placeholder=1 />
+            <input type="text" id= "name" name="name-field" placeholder="Mark" />
+            <input type="email" id="email" name="email-field" placeholder="m@gmail.com" />
+            <div>
+                <input type="radio" id="gender" name="gender-field">
+                <label for="gender">male</label>
+                <label for="gender">female</label>
+                <label for="gender">non-binary</label>
+            </div>
+            <input type="text" id="country" name="country-field" placeholder="country" />
+            <input type="submit" value="Submit" />
+        </form>
+    </body>
+</html>

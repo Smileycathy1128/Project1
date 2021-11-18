@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+    <display-name>Archetype Created Web Application</display-name>
+
+    <servlet>
+        <servlet-name>Servlet1</servlet-name>
+        <servlet-class>com.revature.Servlet1</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Servlet1</servlet-name>
+        <url-pattern>/Servlet1</url-pattern>
+    </servlet-mapping>
+
+<!--    <servlet>-->
+<!--        <servlet-name>Servlet2</servlet-name>-->
+<!--        <servlet-class>com.revature.Servlet2</servlet-class>-->
+<!--    </servlet>-->
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>Servlet2</servlet-name>-->
+<!--        <url-pattern>/Servlet2</url-pattern>-->
+<!--    </servlet-mapping>-->
+
+<!--    <servlet>-->
+<!--        <servlet-name>Servlet3</servlet-name>-->
+<!--        <servlet-class>com.revature.Servlet3</servlet-class>-->
+<!--    </servlet>-->
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>Servlet3</servlet-name>-->
+<!--        <url-pattern>/Servlet3</url-pattern>-->
+<!--    </servlet-mapping>-->
+
+<!--    <servlet>-->
+<!--        <servlet-name>Servlet4</servlet-name>-->
+<!--        <servlet-class>com.revature.Servlet4</servlet-class>-->
+<!--    </servlet>-->
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>Servlet4</servlet-name>-->
+<!--        <url-pattern>/Servlet4</url-pattern>-->
+<!--    </servlet-mapping>-->
+
+<!--    <servlet>-->
+<!--        <servlet-name>Servlet5</servlet-name>-->
+<!--        <servlet-class>com.revature.Servlet5</servlet-class>-->
+<!--    </servlet>-->
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>Servlet5</servlet-name>-->
+<!--        <url-pattern>/Servlet5</url-pattern>-->
+<!--    </servlet-mapping>-->
+
+</web-app>
+
+        <!-- <!DOCTYPE web-app PUBLIC
+         "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+         "http://java.sun.com/dtd/web-app_2_3.dtd" > -->
