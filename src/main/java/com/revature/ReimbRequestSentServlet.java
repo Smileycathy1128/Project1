@@ -6,8 +6,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-public class Servlet1 extends HttpServlet { // TODO: use servlets here
-    private Employee employee;
+public class ReimbRequestSentServlet extends HttpServlet { // TODO: use servlets here
+    private Reimbursement reimb;
         public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
             response.setContentType("text/html; charset=UTF-8");
             PrintWriter out = response.getWriter();
@@ -15,7 +15,7 @@ public class Servlet1 extends HttpServlet { // TODO: use servlets here
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet 1</title>");
+            out.println("<title>Servlet 1 - Reimbursement request sent</title>");
             out.println("</head>");
             out.println("<style>");
             out.println("@import url('https://fonts.googleapis.com/css2?family=PT+Mono&family=PT+Sans&display=swap');");
@@ -30,16 +30,13 @@ public class Servlet1 extends HttpServlet { // TODO: use servlets here
             out.println("<body>");
             String id = request.getParameter("id-field");
             String name = request.getParameter("name-field");
-            String email = request.getParameter("email-field");
-            String gender = request.getParameter("gender-field");
-            String country = request.getParameter("country-field");
+            int reimb = request.getIntHeader("reimb-field");
 
-            out.println("<p style=\"text-align: right;\">");
-            out.println("ID: "+ id +"<br/>");
-            out.println("Name: "+ name +"<br/>");
-            out.println("Email: "+ email +"<br/>");
-            out.println("Gender: "+ gender +"<br/>");
-            out.println("Country: "+ country +"<br/>");
+//            out.println("<p style=\"text-align: right;\">");
+            out.println("<p>");
+            out.println("ID: "+ id +"<br />");
+            out.println("Name: "+ name +"<br /><br />");
+            out.println("Reimbursement amount: <br />"+ reimb);
             out.println("</p>");
             out.println("</body>");
             out.println("</html>");
@@ -51,7 +48,7 @@ public class Servlet1 extends HttpServlet { // TODO: use servlets here
             out.close();
         }
 
-        public Employee getEmployee() {
-            return employee;
+        public Reimbursement getReimbursement() {
+            return reimb;
         }
 }

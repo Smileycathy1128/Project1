@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="ISO-8859-1">
-        <title>Page 1 - Login</title>
+        <title>Reimbursement Requests</title>
     </head>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=PT+Mono&family=PT+Sans&display=swap');
@@ -16,26 +16,15 @@
     </style>
     <body>
 <!--    TODO: change this-->
-        <form action="Servlet0" method="get">
-            ID:
-            <input type="text" id="id" name="id-field" placeholder=31415926 />
-            <br/>
-            Name:
-            <input type="text" id= "name" name="name-field" placeholder="Ajax Jayson" />
-            <br/>
-            Email:
-            <input type="email" id="email" name="email-field" placeholder="aj@gmail.com" />
-            <div>
-                Gender:
-                <input type="radio" id="male" name="gender-field" value="male">
-                <label for="male">male</label>
-                <input type="radio" id="female" name="gender-field" value="female">
-                <label for="female">female</label>
-                <input type="radio" id="non-binary" name="gender-field" value="non-binary">
-                <label for="non-binary">non-binary</label>
-            </div>
-            <input type="text" id="country" name="country-field" placeholder="country" />
-            <br/>
+        <form action="Servlet1" method="get">
+<!--            ID:-->
+<!--            <input type="text" id="id" name="id-field" placeholder=31415926 />-->
+<!--            <br/>-->
+<!--            Name:-->
+<!--            <input type="text" id= "name" name="name-field" placeholder="Ajax Jayson" />-->
+<!--            <br/>-->
+            Reimbursement amount:
+            <input type="text" id= "reimb" name="reimb-field" placeholder="60" />
             <input type="submit" value="Submit" />
         </form>
 

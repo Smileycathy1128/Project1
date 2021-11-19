@@ -2,22 +2,22 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
     <display-name>Archetype Created Web Application</display-name>
 
-    <servlet>
-        <servlet-name>Servlet0</servlet-name>
-        <servlet-class>com.revature.Servlet0</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>Servlet0</servlet-name>
-        <url-pattern>/Servlet0</url-pattern>
-    </servlet-mapping>
+<!--    <servlet>-->
+<!--        <servlet-name>Servlet0</servlet-name>-->
+<!--        <servlet-class>com.revature.Servlet0</servlet-class>-->
+<!--    </servlet>-->
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>Servlet0</servlet-name>-->
+<!--        <url-pattern>/Servlet0</url-pattern>-->
+<!--    </servlet-mapping>-->
 
     <servlet>
-        <servlet-name>Servlet1</servlet-name>
-        <servlet-class>com.revature.Servlet1</servlet-class>
+        <servlet-name>ReimbRequestSentServlet</servlet-name>
+        <servlet-class>com.revature.ReimbRequestSentServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>Servlet1</servlet-name>
-        <url-pattern>/Servlet1</url-pattern>
+        <servlet-name>ReimbRequestSentServlet</servlet-name>
+        <url-pattern>/ReimbRequestSentServlet</url-pattern>
     </servlet-mapping>
 
 <!--    <servlet>-->

@@ -1,14 +1,13 @@
 package com.revature;
 
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-public class Servlet0 extends HttpServlet {
-    private Employee employee;
+public class LoginOptionsServlet extends HttpServlet { // TODO:
+    private Reimbursement employee;
         public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
             response.setContentType("text/html; charset=UTF-8");
             PrintWriter out = response.getWriter();
@@ -51,7 +50,7 @@ public class Servlet0 extends HttpServlet {
             out.close();
         }
 
-        public Employee getEmployee() {
+        public Reimbursement getEmployee() {
             return employee;
         }
 }

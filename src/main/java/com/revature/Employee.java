@@ -6,79 +6,40 @@ import javax.persistence.Id;
 @Entity
 public class Employee {
     @Id
-    private String id;
+    private int id;
     private String name;
-    private String email;
-    private String gender;
-    private String country;
+    private String email; // also, the username
+    private String password;
 
-    public Employee(){}
+    public Employee() {}
 
-    public Employee(String id, String name, String email, String gender, String country) {
+    public Employee(int id, String name, String email, String password) {
         this.id = id;
         this.name = name;
         this.email = email;
-        setGender(gender);
-        this.country = country;
+        this.password = password;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
-    public void setId(String id) {
-        this.id = id;
-    }
+//    public void setId(int id) { this.id = id; }
 
     public String getName() {
         return name;
     }
-    public void setName(String name) {
-        this.name = name;
-    }
+//    public void setName(String name) { this.name = name; }
 
     public String getEmail() {
         return email;
     }
-    public void setEmail(String email) {
-        this.email = email;
-    }
+//    public void setEmail(String email) { this.email = email; }
 
-    public String getGender() {
-        return gender;
-//        switch (gender) {
-//            case 0:
-//                return "male";
-//            case 1:
-//                return "female";
-//            case 2:
-//                return "non-binary";
-//            default: // usually -1
-//                return "unknown or other";
-//        }
+    public String getPassword() {
+        return password;
     }
-    public void setGender(String gender) {
-        this.gender = gender;
-//        switch (gender) {
-//            case "male":
-//                this.gender = 0;
-//                break;
-//            case "female":
-//                this.gender = 1;
-//                break;
-//            case "non-binary":
-//                this.gender = 2;
-//                break;
-//            default:
-//                this.gender = -1;
-//                break;
-//        }
-    }
-
-    public String getCountry() {
-        return country;
-    }
-    public void setCountry(String country) {
-        this.country = country;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
 }

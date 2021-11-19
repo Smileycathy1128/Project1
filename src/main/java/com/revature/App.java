@@ -28,10 +28,10 @@ public class App {
 //        employee.setName("Mark");
 //        employee.setEmail("m@gmail.com");
         // TODO: run page 1, which runs servlet 1
-        Servlet0 servlet1 = new Servlet0();
-        Employee employee = servlet1.getEmployee(); // TODO: Get from Servlet1
+        ReimbRequestSentServlet servlet1 = new ReimbRequestSentServlet();
+        Reimbursement reimb = servlet1.getReimbursement(); // TODO: Get from Servlet1
         // save the employee
-        session.save(employee);
+        session.save(reimb);
         // commit the transaction
         t.commit();
         // close the connection
