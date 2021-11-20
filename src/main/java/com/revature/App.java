@@ -6,36 +6,40 @@ import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
 public class App {
+    static Configuration config;
+    static SessionFactory sessionFactory;
+    static Session session;
+    static Transaction transaction;
+
     public static void main( String[] args ) {
         System.out.println("project started...");
 
         // create a configuration object
-        Configuration cfg = new Configuration();
-
+        config = new Configuration();
         // read the configuration and load in the object
-        cfg.configure("hibernate.cfg.xml");
-
+        config.configure("hibernate.cfg.xml");
         // create factory
-        SessionFactory factory = cfg.buildSessionFactory();
+        sessionFactory = config.buildSessionFactory();
+
         // open the session
-        Session session = factory.openSession();
+//        session = sessionFactory.openSession();
         // begin the transaction
-        Transaction t = session.beginTransaction();
+//        transaction = session.beginTransaction();
 
         // create employee
 //        Employee employee = new Employee(2, "Mark", "m@gmail.com", "male", "USA");
 //        employee.setId(1);
 //        employee.setName("Mark");
 //        employee.setEmail("m@gmail.com");
-        // TODO: run page 1, which runs servlet 1
+
         ReimbRequestSentServlet servlet1 = new ReimbRequestSentServlet();
         Reimbursement reimb = servlet1.getReimbursement(); // TODO: Get from Servlet1
         // save the employee
-        session.save(reimb);
+//        session.save(reimb);
         // commit the transaction
-        t.commit();
+//        transaction.commit();
         // close the connection
-        session.close();
+//        session.close();
     }
 
 

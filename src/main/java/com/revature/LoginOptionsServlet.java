@@ -1,16 +1,27 @@
 package com.revature;
 
+import com.mysql.cj.log.Log;
+
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class LoginOptionsServlet extends HttpServlet { // TODO:
+    static HttpServletRequest request;
+    static HttpServletResponse response;
+    static PrintWriter out;
     private Reimbursement employee;
-        public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+
+        public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
             response.setContentType("text/html; charset=UTF-8");
-            PrintWriter out = response.getWriter();
+            LoginOptionsServlet.request = request;
+            LoginOptionsServlet.response = response;
+
+            out = response.getWriter();
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
@@ -27,30 +38,43 @@ public class LoginOptionsServlet extends HttpServlet { // TODO:
                     "}");
             out.println("</style>");
             out.println("<body>");
-            String id = request.getParameter("id-field");
-            String name = request.getParameter("name-field");
-            String email = request.getParameter("email-field");
-            String gender = request.getParameter("gender-field");
-            String country = request.getParameter("country-field");
 
-            out.println("<p style=\"text-align: right;\">");
-            out.println("ID: "+ id +"<br/>");
-            out.println("Name: "+ name +"<br/>");
-            out.println("Email: "+ email +"<br/>");
-            out.println("Gender: "+ gender +"<br/>");
-            out.println("Country: "+ country +"<br/>");
-            out.println("</p>");
+            String email = request.getParameter("email-field");
+            String password = request.getParameter("password-field");
+
+            ResultSet resultSet = DaoFactory.getResultSet("select * from 'employee'");
+            try {
+                while(resultSet.next()) {
+                    String tempEmail = resultSet.getString("email");
+                    if(tempEmail.equals(email)) {
+                        String tempPassword = resultSet.getString("password");
+                        if(tempPassword.equals(password)) {
+                            // log them in
+                            String tempId = resultSet.getString("id");
+                            String tempName = resultSet.getString("name");
+                            Employee tempEmployee = new Employee(tempId,tempName,tempEmail,tempPassword);
+                            login(tempEmployee);
+                        }
+                        out.println("<p>wrong password</p>");
+                    }
+                }
+                out.println("<p>cannot find email</p>");
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
             out.println("</body>");
             out.println("</html>");
-//            System.out.println("ID: "+ id);
-//            System.out.println("Name: "+ name);
-//            System.out.println("Email: "+ email);
-//            System.out.println("Gender: "+ gender);
-//            System.out.println("Country: "+ country);
             out.close();
-        }
 
-        public Reimbursement getEmployee() {
-            return employee;
         }
+        static void login(Employee employee) {
+            out.println("<p style=\"text-align: right;\">");
+            out.println("ID: "+ employee.getId() +"<br/>");
+            out.println("Name: "+ employee.getName() +"<br/>");
+            out.println("Email: "+ employee.getEmail() +"<br/>");
+            out.println("</p>");
+        }
+//        public Reimbursement getEmployee() {
+//            return employee;
+//        }
 }

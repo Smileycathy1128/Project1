@@ -16,26 +16,11 @@
     </style>
 <!--    TODO: -->
     <body>
-        <form action="Servlet0" method="get">
-            ID:
-            <input type="text" id="id" name="id-field" placeholder=31415926 />
-            <br/>
-            Name:
-            <input type="text" id= "name" name="name-field" placeholder="Ajax Jayson" />
-            <br/>
+        <form action="LoginOptionsServlet" method="post">
             Email:
             <input type="email" id="email" name="email-field" placeholder="aj@gmail.com" />
-            <div>
-                Gender:
-                <input type="radio" id="male" name="gender-field" value="male">
-                <label for="male">male</label>
-                <input type="radio" id="female" name="gender-field" value="female">
-                <label for="female">female</label>
-                <input type="radio" id="non-binary" name="gender-field" value="non-binary">
-                <label for="non-binary">non-binary</label>
-            </div>
-            <input type="text" id="country" name="country-field" placeholder="country" />
-            <br/>
+            Password:
+            <input type="password" id="password" name="password-field">
             <input type="submit" value="Submit" />
         </form>
 

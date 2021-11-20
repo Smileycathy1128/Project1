@@ -29,4 +29,12 @@ public class Reimbursement {
     public int getAmount() {
         return amount;
     }
+
+    public void add2Table() {
+        App.session = App.sessionFactory.openSession();
+        App.transaction = App.session.beginTransaction();
+        App.session.save(this);
+        App.transaction.commit();
+        App.session.close();
+    }
 }

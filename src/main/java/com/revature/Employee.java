@@ -6,21 +6,21 @@ import javax.persistence.Id;
 @Entity
 public class Employee {
     @Id
-    private int id;
+    private String id;
     private String name;
     private String email; // also, the username
     private String password;
 
     public Employee() {}
 
-    public Employee(int id, String name, String email, String password) {
+    public Employee(String id, String name, String email, String password) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.password = password;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 //    public void setId(int id) { this.id = id; }
