@@ -6,7 +6,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-public class ReimbRequestSentServlet extends HttpServlet { // TODO: work on this after reimb request thingy
+public class ReimbListServlet extends HttpServlet { // TODO: work on this after reimb request thingy
     private Reimbursement reimb;
         public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
             response.setContentType("text/html; charset=UTF-8");
@@ -30,7 +30,7 @@ public class ReimbRequestSentServlet extends HttpServlet { // TODO: work on this
             out.println("<body>");
             String id = request.getParameter("id-field");
             String name = request.getParameter("name-field");
-            double reimb = request.getIntHeader("reimb-field"); // TODO: how do I go back?
+            double reimb = request.getIntHeader("reimb-field");
 
 //            out.println("<p style=\"text-align: right;\">");
             out.println("<p>");

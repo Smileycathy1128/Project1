@@ -6,27 +6,28 @@ import javax.persistence.Id;
 @Entity
 public class Reimbursement {
     @Id
-    private String id;
+    private String timeSent;
     private String name;
-    private int amount;
+    private String username;
+    private double amount;
 
     public Reimbursement(){}
 
-    public Reimbursement(String id, String name, int amount) {
-        this.id = id;
+    public Reimbursement(String name, String username, int amount) {
         this.name = name;
+        this.username = username;
         this.amount = amount;
-    }
-
-    public String getId() {
-        return id;
     }
 
     public String getName() {
         return name;
     }
 
-    public int getAmount() {
+    public String getUsername() {
+        return username;
+    }
+
+    public double getAmount() {
         return amount;
     }
 

@@ -11,14 +11,15 @@
             line-height: 2rem;
             font-family: 'PT Mono', monospace;
             font-family: 'PT Sans', sans-serif;
-            text-align: right;
+            text-align: center;
         }
     </style>
-<!--    TODO: -->
+
     <body>
-        <form action="LoginOptionsServlet" method="post">
-            Email:
-            <input type="email" id="email" name="email-field" placeholder="aj@gmail.com" />
+        <form action="ManagerLoginOptionsServlet" method="post">
+            Username:
+            <input type="text" id="username" name="username-field" />
+            <br />
             Password:
             <input type="password" id="password" name="password-field">
             <input type="submit" value="Submit" />

@@ -5,10 +5,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.revature</groupId>
-    <artifactId>hibernate-demo-app</artifactId>
+    <artifactId>Project1</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <name>hibernate-demo-app</name>
+    <name>Project1</name>
     <!--Change it to the project's website -->
 <!--    <url>http://www.example.com</url>-->
 
@@ -100,6 +100,18 @@
                     <artifactId>maven-project-info-reports-plugin</artifactId>
                     <version>3.0.0</version>
                 </plugin>
+                
+                <!-- <plugin>
+                    <groupId>org.apache.tomcat.embed</groupId>
+                    <artifactId>tomcat-embed-core</artifactId>
+                    <version>9.0.54</version>
+                    <configuration>
+                        <url>http://localhost:8080/src/webapp</url>
+                        <server>TomcatServer</server>
+                        <path>/Project1</path>
+                    </configuration>
+                </plugin> -->
+                
             </plugins>
         </pluginManagement>
     </build>

@@ -10,8 +10,11 @@ public class App {
     static SessionFactory sessionFactory;
     static Session session;
     static Transaction transaction;
+    static EmployeeLoginOptionsServlet employeeLoginOptionsServlet;
+    static ManagerLoginOptionsServlet managerLoginOptionsServlet;
+    static ReimbRequestSentServlet reimbRequestSentServlet;
 
-    public static void main( String[] args ) {
+    public static void main( String[] args ) { // TODO: figure out where to put the Main method
         System.out.println("project started...");
 
         // create a configuration object
@@ -22,25 +25,34 @@ public class App {
         sessionFactory = config.buildSessionFactory();
 
         // open the session
-//        session = sessionFactory.openSession();
+        session = sessionFactory.openSession();
         // begin the transaction
-//        transaction = session.beginTransaction();
+        transaction = session.beginTransaction();
 
         // create employee
-//        Employee employee = new Employee(2, "Mark", "m@gmail.com", "male", "USA");
+//        Employee employee = new Employee("Mark", "m@gmail.com", "123");
 //        employee.setId(1);
 //        employee.setName("Mark");
 //        employee.setEmail("m@gmail.com");
 
-        ReimbRequestSentServlet servlet1 = new ReimbRequestSentServlet();
-        Reimbursement reimb = servlet1.getReimbursement(); // TODO: Get from Servlet1
+        employeeLoginOptionsServlet = new EmployeeLoginOptionsServlet();
+        managerLoginOptionsServlet = new ManagerLoginOptionsServlet();
+        reimbRequestSentServlet = new ReimbRequestSentServlet();
+//        Reimbursement reimb = servlet1.getReimbursement(); // TODO: for finanical admins
         // save the employee
-//        session.save(reimb);
+//        session.save(employee);
         // commit the transaction
-//        transaction.commit();
+        transaction.commit();
         // close the connection
-//        session.close();
+        session.close();
     }
-
-
+//    public void add2Table(Reimbursement reimb) {
+//        App.session = App.sessionFactory.openSession();
+//        App.transaction = App.session.beginTransaction();
+//        App.session.save(reimb);
+//        App.transaction.commit();
+//        App.session.close();
+//    }
 }
+
+

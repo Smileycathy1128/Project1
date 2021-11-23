@@ -4,7 +4,7 @@
 
     <servlet>
         <servlet-name>LoginOptionsServlet</servlet-name>
-        <servlet-class>com.revature.LoginOptionsServlet</servlet-class>
+        <servlet-class>com.revature.EmployeeLoginOptionsServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>LoginOptionsServlet</servlet-name>

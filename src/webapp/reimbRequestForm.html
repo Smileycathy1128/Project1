@@ -15,7 +15,8 @@
         }
     </style>
     <body>
-        <form action="Servlet1" method="get">
+        <form action="ReimbRequestSentServlet" method="get">
+            <!-- TODO: Keep as HTML, or change to Servlet? -->
 <!--            ID:-->
 <!--            <input type="text" id="id" name="id-field" placeholder=31415926 />-->
 <!--            <br/>-->
@@ -23,7 +24,7 @@
 <!--            <input type="text" id= "name" name="name-field" placeholder="Ajax Jayson" />-->
 <!--            <br/>-->
             Reimbursement amount:
-            <input type="text" id= "reimb" name="reimb-field" placeholder="60" />
+            <input type="number" id= "reimb" name="reimb-field" />
             <input type="submit" value="Submit" />
         </form>
 
